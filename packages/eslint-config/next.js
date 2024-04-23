@@ -5,7 +5,7 @@ const project = resolve(process.cwd(), 'tsconfig.json');
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   extends: [
-    require.resolve('./library.js'),
+    require.resolve('./react-internal.js'),
     require.resolve('@vercel/style-guide/eslint/next'),
   ],
   globals: {
