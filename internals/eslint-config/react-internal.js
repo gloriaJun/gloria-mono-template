@@ -5,13 +5,6 @@ const project = resolve(process.cwd(), 'tsconfig.json');
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   extends: [require.resolve('./library.js')],
-  settings: {
-    'import/resolver': {
-      typescript: {
-        project,
-      },
-    },
-  },
   overrides: [
     {
       files: ['*.tsx', '*.jsx'],

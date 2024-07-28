@@ -4,20 +4,20 @@ const project = resolve(process.cwd(), 'tsconfig.json');
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
+  plugins: ['only-warn', 'import', 'regexp'],
   extends: [
     'eslint:recommended',
     'prettier',
-    'eslint-config-turbo',
     'plugin:regexp/recommended',
+    'turbo',
   ],
-  plugins: ['only-warn', 'import', 'regexp'],
   globals: {
     React: true,
     JSX: true,
   },
   env: {
     node: true,
-    // browser: true,
+    browser: true,
     // es2021: true,
   },
   settings: {
@@ -84,15 +84,13 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
+      plugins: ['@typescript-eslint'],
       extends: [
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
-      plugins: ['@typescript-eslint'],
       parserOptions: {
-        // sourceType: 'module',
-        // project: ['./tsconfig.json'],
         project: true,
         tsconfigRootDir: __dirname,
       },

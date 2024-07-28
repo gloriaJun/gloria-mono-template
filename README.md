@@ -2,14 +2,13 @@
 
 ## DevLog Specs
 
-- pnpm v8.x.x
-- Turborepo v18.x.x
-- React v18.x.x.
+- pnpm v9.x.x
+- Turborepo v2.x.x
 - TypeScript v5
-- Next.js v14
 - husky v9
 - eslint v8
 - prettier v3
+- commitlint v19
 
 ## Prepared to run server
 
@@ -22,11 +21,18 @@ corepack enable
 ### Install Package modules
 
 ```bash
-pnpm install
+# add to global
+pnpm install <package_name> -w
 ```
 
 ### Run Server
 
 ```bash
 pnpm run <script_command> --filter <package_name>
+```
+
+### Add new app or package
+
+```bash
+pnpm turbo gen workspace --name <name> --type <app|package>
 ```
