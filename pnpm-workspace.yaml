@@ -3,5 +3,3 @@ packages:
   - "apps/*"
   # all packages in subdirs of packages/ likes libraries
   - "packages/*"
-  # all configs in subdirs of config /
-  - "internals/*"

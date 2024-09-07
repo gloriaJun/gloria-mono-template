@@ -2,13 +2,13 @@
 
 ## DevLog Specs
 
-- pnpm v9.x.x
-- Turborepo v2.x.x
-- TypeScript v5
-- husky v9
-- eslint v8
-- prettier v3
-- commitlint v19
+- Package Manager: pnpm v9.x.x
+- Mono Management: [Turborepo](https://turbo.build/repo/docs) v2.x.x
+- eslint v8.x.x
+- prettier v3.x.x
+- husky v9.x.x
+- lint-staged v15.x.x
+- commitlint v19.x.x
 
 ## Prepared to run server
 
@@ -18,11 +18,16 @@
 corepack enable
 ```
 
+- to install pnpm by using corepack
+
+```bash
+corepack use pnpm@latest
+```
+
 ### Install Package modules
 
 ```bash
-# add to global
-pnpm install <package_name> -w
+pnpm install
 ```
 
 ### Run Server
@@ -31,8 +36,10 @@ pnpm install <package_name> -w
 pnpm run <script_command> --filter <package_name>
 ```
 
-### Add new app or package
+## Manage Packages
+
+### Update Package
 
 ```bash
-pnpm turbo gen workspace --name <name> --type <app|package>
+pnpm update --latest --recursive
 ```

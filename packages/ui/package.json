@@ -13,10 +13,10 @@
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@internals/eslint-config": "workspace:*",
-    "@internals/tsconfig": "workspace:*",
-    "@types/react": "^18.2.61",
-    "@types/react-dom": "^18.2.19"
+    "@template/eslint-config": "workspace:*",
+    "@template/tsconfig": "workspace:*",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0"
   },
   "peerDependencies": {
     "react": "^18.2.0"
